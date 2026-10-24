@@ -48,12 +48,29 @@ I deliberately kept StageMate human-in-the-loop: it suggests information but doe
 - Developed mainly for Dutch-language use; other languages have not been extensively tested.
 - A local checkout needs its own correctly configured Supabase/Groq backend for live AI features. The repository contains no API credentials.
 
-## Run the frontend locally
+## Running locally
+You need Node.js and npm installed.
+
+1. Clone this repository or download the ZIP from GitHub and extract it.
+2. Open a terminal in the folder containing `package.json`.
+3. Install dependencies and start the development server:
+
 ```bash
 npm install
 npm run dev
 ```
-The frontend alone is not a fully functioning AI deployment. Live AI requires Supabase Edge Functions and a server-side `GROQ_API_KEY`. Never commit secrets or expose them in frontend code.
+
+4. Open the local address shown in the terminal (usually `http://localhost:5173`). Stop the server with `Ctrl+C`.
+
+To check that the frontend can be built for production:
+
+```bash
+npm run build
+```
+
+On Windows PowerShell, if running `npm` is blocked by script execution policy, use `npm.cmd install`, `npm.cmd run dev` and `npm.cmd run build` instead.
+
+The frontend can run locally, but the AI features need a separately configured Supabase backend and a server-side `GROQ_API_KEY`. No credentials are included. Never commit secrets or expose them in frontend code. For a working online demonstration, use the original educational prototype linked at the top of this README.
 
 ## Why this repository is separate
 This is a cleaned-up portfolio copy of the original private school repository. It includes application code and essential configuration, but excludes internal course rubrics, week notes, prompt logs, assessment documents and the original commit history. It is not connected to the original Vercel deployment; the existing educational website and its backend remain unchanged.
