@@ -5,7 +5,7 @@ import type { AnalyseResultaat } from '@/types';
 // ============================================================================
 //
 // Deze module roept de Supabase Edge Function `analyseer-tekst` aan,
-// die op zijn beurt OpenAI raadpleegt met de API-key als server-side secret.
+// die vervolgens via Groq het geconfigureerde AI-model aanroept met een server-side API-key.
 //
 // De API-key staat NOOIT in de frontend — alleen de Supabase anon key
 // wordt meegestuurd voor authenticatie van het edge-function-verzoek.
