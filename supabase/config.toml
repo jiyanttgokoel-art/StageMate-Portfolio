@@ -1,0 +1,5 @@
+[functions.analyseer-tekst]
+verify_jwt = false
+
+[functions.beantwoord-vraag]
+verify_jwt = false
